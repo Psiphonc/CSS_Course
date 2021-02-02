@@ -5,15 +5,16 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: 
 */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  /* any borders and padding margin are no longer added to the total box size */
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 /* properties related to font are usually inherited so we using the body element to set universal font */
@@ -24,6 +25,8 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+  /* any borders and padding margin are no longer added to the total box size */
+  box-sizing: border-box;
 }
 
 .header {
@@ -124,6 +127,7 @@ body {
   border-radius: 10rem;
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn--animated {
