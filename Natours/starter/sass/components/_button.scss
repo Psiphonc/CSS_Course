@@ -53,6 +53,11 @@
       background-color: $color-white;
     }
   }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+  }
 }
 
 .btn-text {
