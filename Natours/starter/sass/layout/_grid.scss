@@ -12,7 +12,7 @@
   // !!!attribute selector
   // select every element with a class attribute start with "col-"
   // *= means contain ^= means start with $= means end with
-  // just search mdn for attribute selector for more information
+  // just search mdn for "attribute selector" to get more information
   [class^='col-'] {
     float: left;
 
