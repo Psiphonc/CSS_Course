@@ -4,3 +4,23 @@
   // negative margin moves the whole thing up
   margin-top: -25vh;
 }
+
+.section-feature {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../../img/nat-4.jpg);
+  background-size: cover;
+  // clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+  margin-top: -10rem;
+  // !!!Another way to make polygon edge
+  transform: skewY(-8.2deg);
+
+  // child selector > means to select all of the direct child
+  & > * {
+    transform: skewY(8.2deg);
+  }
+}
