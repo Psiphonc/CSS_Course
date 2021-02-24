@@ -7,12 +7,28 @@
 }
 
 html {
-  // this defines what 1 rem is
-  font-size: 62.5%;
+  font-size: 62.5%; // defines the sz of the entire layout (1rem = 10px)
+
+  // ! order really matters
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
+
 }
 
 /* properties related to font are usually inherited so we using the body element to set universal font */
 body {
   /* any borders and padding margin are no longer added to the total box size */
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
